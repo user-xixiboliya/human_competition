@@ -53,3 +53,7 @@ for epoch in range(n_epochs):
 `model = NeuralNet(tr_set.dataset.dim).to(device)`加载model。
 #### 保存csv文件
 关键的函数有两个：`df = pd.DataFrame({'id':range(len(preds)),'tested_positive':preds[:]})`和`df.to_csv(submission_path, index=False)`
+
+## HW2
+等作者有力气的时候在写吧~
+
