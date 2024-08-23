@@ -55,5 +55,18 @@ for epoch in range(n_epochs):
 关键的函数有两个：`df = pd.DataFrame({'id':range(len(preds)),'tested_positive':preds[:]})`和`df.to_csv(submission_path, index=False)`
 
 ## HW2
-等作者有力气的时候在写吧~
+### 数据说明
+ Phoneme Classification 音素识别
+ ![image](https://github.com/user-attachments/assets/422d21b7-49fb-4947-87d9-3ef001fcaae4)
+其中，train_labels.txt: 由训练数据和labels组成，格式为: filename labels。其中，label 为 frame 对应的 phoneme。
+![image](https://github.com/user-attachments/assets/f85aaca9-6aae-48e7-996b-c354c09db2b3)
+test_split.txt: 其中每一行对应一个训练数据，其所对应的文件在feat/test/中。
+feat/train/{id}.pt 和 feat/test/{id}.pt: 音频对应的 MFCC w/ CMVN，维度为39，这些文件可以通过torch.load()直接导入，导入后的shape为(T, 39)。
+### 框架
+#### 文件处理
+基本思路同HW1，定义一个ramdom_seeds()函数。
+#### Dataset
+#### Dataloader
+#### neural network
+
 
