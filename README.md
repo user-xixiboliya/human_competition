@@ -57,6 +57,7 @@ for epoch in range(n_epochs):
 ## HW2
 ### 数据说明
  Phoneme Classification 音素识别
+ ![image](https://github.com/user-attachments/assets/2668358e-6495-4626-b1c8-16299b829ec1)
  ![image](https://github.com/user-attachments/assets/422d21b7-49fb-4947-87d9-3ef001fcaae4)
 其中，train_labels.txt: 由训练数据和labels组成，格式为: filename labels。其中，label 为 frame 对应的 phoneme。
 ![image](https://github.com/user-attachments/assets/f85aaca9-6aae-48e7-996b-c354c09db2b3)
@@ -64,7 +65,7 @@ test_split.txt: 其中每一行对应一个训练数据，其所对应的文件�
 feat/train/{id}.pt 和 feat/test/{id}.pt: 音频对应的 MFCC w/ CMVN，维度为39，这些文件可以通过torch.load()直接导入，导入后的shape为(T, 39)。
 ### 框架
 #### 文件处理
-基本思路同HW1，定义一个ramdom_seeds()函数。
+基本思路同HW1，定义一个ramdom_seeds()函数，使用torch.load()函数加载pt文件的数据。
 #### Dataset
 #### Dataloader
 #### neural network
